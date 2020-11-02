@@ -87,3 +87,19 @@ function authCallback(request) {
 function logRedirectUri() {
   Logger.log(OAuth2.getRedirectUri());
 }
+function reset() {
+  getService().reset();
+}
+
+function showSidebar() {
+  var service = getService();
+  if (!service.hasAccess()) {
+    var authorizationUrl = service.getAuthorizationUrl();
+    var template = HtmlService.createTemplate(
+        '<a href="<?= authorizationUrl ?>" target="_blank">Authorize</a>. ' +
+        'Reopen the sidebar when the authorization is complete.');
+    template.authorizationUrl = authorizationUrl;
+    var page = template.evaluate();
+    SpreadsheetApp.getUi().showSidebar(page);
+  }
+}

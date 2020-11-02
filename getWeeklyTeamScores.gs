@@ -60,8 +60,7 @@ function getWeeklyScores() {
   }
     
   else{
-    var authorizationUrl = service.getAuthorizationUrl();
-    Logger.log('Open the following URL and re-run the script: %s',authorizationUrl);
+    showSidebar();
   }
   
 }
