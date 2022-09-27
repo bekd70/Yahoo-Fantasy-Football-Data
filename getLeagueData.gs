@@ -12,7 +12,7 @@ function getLeagueData() {
   var service = getService();
   if (service.hasAccess()) {
     leagueDataSheet.clear();
-    var url = 'https://fantasysports.yahooapis.com/fantasy/v2/league/399.l.' + GLOBALS.leagueId;
+    var url = 'https://fantasysports.yahooapis.com/fantasy/v2/league/' + GLOBALS.seasonId + '.l.' + GLOBALS.leagueId;
     try{
       var response = UrlFetchApp.fetch(url, {
         headers: {
@@ -56,7 +56,7 @@ function getRosterData() {
   var service = getService();
   if (service.hasAccess()) {
     rosterInfoSheet.clear();
-    var url = 'https://fantasysports.yahooapis.com/fantasy/v2/league/399.l.' + GLOBALS.leagueId + '/settings';
+    var url = 'https://fantasysports.yahooapis.com/fantasy/v2/league/' + GLOBALS.seasonId + '.l.' + GLOBALS.leagueId + '/settings';
     try{
       var response = UrlFetchApp.fetch(url, {
         headers: {
@@ -95,7 +95,7 @@ function getStatKeys(){
   }
   var service = getService();
   if (service.hasAccess()) {
-    var url = 'https://fantasysports.yahooapis.com/fantasy/v2/league/399.l.' + GLOBALS.leagueId + '/settings';
+    var url = 'https://fantasysports.yahooapis.com/fantasy/v2/league/' + GLOBALS.seasonId + '.l.' + GLOBALS.leagueId + '/settings';
     try{
       var response = UrlFetchApp.fetch(url, {
         headers: {

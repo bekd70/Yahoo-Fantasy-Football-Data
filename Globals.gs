@@ -22,7 +22,8 @@ var GLOBALS = {
   CLIENT_SECRET: '{YOUR YAHOO CLIENT SECRET}',
   teamCount: 14,
   leagueId: '{YOUR YAHOO FANTASY SPORTS LEAGUE ID}',
-  totalWeeks:16
+  totalWeeks:16,
+  seasonId: 414
 }
 
 var Logger = BetterLog.useSpreadsheet(GLOBALS.sheetId);
