@@ -14,7 +14,7 @@ function getTeams() {
     sheet.clear();
     sheet.appendRow(['teamKey','teamId','teamName','teamUrl','teamLogo','teamManager']);
     for(var t=1; t<GLOBALS.teamCount+1; t++){
-      var url = 'https://fantasysports.yahooapis.com/fantasy/v2/team/399.l.' + GLOBALS.leagueId +'.t.'+ t;
+      var url = 'https://fantasysports.yahooapis.com/fantasy/v2/team/' + GLOBALS.seasonId + '.l.' + GLOBALS.leagueId +'.t.'+ t;
       try{
         var response = UrlFetchApp.fetch(url, {
           headers: {
