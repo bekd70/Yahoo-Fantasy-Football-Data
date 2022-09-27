@@ -54,7 +54,7 @@ function getWeeklyPlayerStats(w) {
           playerKeys = playerKeys + teamValues[p][2];
         }
       }
-      var url2 = 'https://fantasysports.yahooapis.com/fantasy/v2/league/399.l.785967/players;' + playerKeys + '/stats;type=week;week=' + w;
+      var url2 = 'https://fantasysports.yahooapis.com/fantasy/v2/league/399.l.' + GLOBALS.leagueId + '/players;' + playerKeys + '/stats;type=week;week=' + w;
       try{
         var response2 = UrlFetchApp.fetch(url2, {
           headers: {
