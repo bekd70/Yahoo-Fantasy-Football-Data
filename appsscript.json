@@ -9,6 +9,10 @@
       "userSymbol": "OAuth2",
       "libraryId": "1B7FSrk5Zi6L1rSxxTDgDEUsPzlukDsi4KGuTMorsTQHhGBzBkMun4iDF",
       "version": "38"
+    }, {
+      "userSymbol": "ArrayLib",
+      "libraryId": "1r9wNWbta3ebuYL4ENAdIp4UYKmyNiWf1AqsXYzfXduRHhTZEeTxS9MhZ",
+      "version": "23"
     }]
   },
   "exceptionLogging": "STACKDRIVER",
